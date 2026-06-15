@@ -233,3 +233,19 @@ class ShipmentStatus(str, enum.Enum):
     IN_TRANSIT = "in_transit"
     DELIVERED = "delivered"
     CANCELLED = "cancelled"
+
+
+class CouponDiscountType(str, enum.Enum):
+    PERCENTAGE = "percentage"
+    FIXED_AMOUNT = "fixed_amount"
+
+
+class CouponAppliesTo(str, enum.Enum):
+    ALL = "all"
+    ONLINE = "online"
+    POS = "pos"
+
+
+class CouponUsageReferenceType(str, enum.Enum):
+    ORDER = "order"
+    SALE = "sale"
