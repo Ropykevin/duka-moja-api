@@ -136,3 +136,12 @@ class StockTransferStatus(str, enum.Enum):
     IN_TRANSIT = "in_transit"
     RECEIVED = "received"
     CANCELLED = "cancelled"
+
+
+class PurchaseOrderStatus(str, enum.Enum):
+    DRAFT = "draft"
+    SUBMITTED = "submitted"
+    APPROVED = "approved"
+    PARTIAL_RECEIVED = "partial_received"
+    RECEIVED = "received"
+    CANCELLED = "cancelled"
