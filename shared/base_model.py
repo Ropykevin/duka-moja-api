@@ -145,3 +145,55 @@ class PurchaseOrderStatus(str, enum.Enum):
     PARTIAL_RECEIVED = "partial_received"
     RECEIVED = "received"
     CANCELLED = "cancelled"
+
+
+class CustomerStatus(str, enum.Enum):
+    ACTIVE = "active"
+    INACTIVE = "inactive"
+
+
+class CartStatus(str, enum.Enum):
+    ACTIVE = "active"
+    CONVERTED = "converted"
+    ABANDONED = "abandoned"
+
+
+class OrderStatus(str, enum.Enum):
+    PENDING = "pending"
+    CONFIRMED = "confirmed"
+    PROCESSING = "processing"
+    SHIPPED = "shipped"
+    DELIVERED = "delivered"
+    CANCELLED = "cancelled"
+    REFUNDED = "refunded"
+
+
+class PaymentStatus(str, enum.Enum):
+    PENDING = "pending"
+    PAID = "paid"
+    PARTIAL = "partial"
+    REFUNDED = "refunded"
+    FAILED = "failed"
+
+
+class LoyaltyTier(str, enum.Enum):
+    BRONZE = "bronze"
+    SILVER = "silver"
+    GOLD = "gold"
+    PLATINUM = "platinum"
+
+
+class CashRegisterStatus(str, enum.Enum):
+    ACTIVE = "active"
+    INACTIVE = "inactive"
+
+
+class CashSessionStatus(str, enum.Enum):
+    OPEN = "open"
+    CLOSED = "closed"
+
+
+class SaleStatus(str, enum.Enum):
+    DRAFT = "draft"
+    COMPLETED = "completed"
+    VOIDED = "voided"

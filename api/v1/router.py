@@ -5,6 +5,12 @@ from app.modules.catalog.attribute_router import router as attributes_router
 from app.modules.catalog.brand_router import router as brands_router
 from app.modules.catalog.category_router import router as categories_router
 from app.modules.catalog.router import router as products_router
+from app.modules.customers.cart_router import router as cart_router
+from app.modules.customers.customer_router import router as customers_router
+from app.modules.customers.order_router import router as orders_router
+from app.modules.pos.register_router import router as cash_registers_router
+from app.modules.pos.session_router import router as cash_sessions_router
+from app.modules.pos.sale_router import router as sales_router
 from app.modules.inventory.router import router as inventory_router
 from app.modules.procurement.purchase_order_router import router as purchase_orders_router
 from app.modules.procurement.supplier_router import router as suppliers_router
@@ -22,6 +28,12 @@ api_router.include_router(categories_router)
 api_router.include_router(brands_router)
 api_router.include_router(attributes_router)
 api_router.include_router(products_router)
+api_router.include_router(customers_router)
+api_router.include_router(cart_router)
+api_router.include_router(orders_router)
+api_router.include_router(cash_registers_router)
+api_router.include_router(cash_sessions_router)
+api_router.include_router(sales_router)
 api_router.include_router(inventory_router)
 api_router.include_router(suppliers_router)
 api_router.include_router(purchase_orders_router)
