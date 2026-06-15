@@ -89,3 +89,31 @@ class UserStatus(str, enum.Enum):
     ACTIVE = "active"
     INACTIVE = "inactive"
     SUSPENDED = "suspended"
+
+
+class StoreStatus(str, enum.Enum):
+    ACTIVE = "active"
+    INACTIVE = "inactive"
+    CLOSED = "closed"
+
+
+class BranchStatus(str, enum.Enum):
+    ACTIVE = "active"
+    INACTIVE = "inactive"
+
+
+class ProductStatus(str, enum.Enum):
+    DRAFT = "draft"
+    ACTIVE = "active"
+    ARCHIVED = "archived"
+
+
+class ProductType(str, enum.Enum):
+    SIMPLE = "simple"
+    VARIABLE = "variable"
+
+
+class AttributeDisplayType(str, enum.Enum):
+    SELECT = "select"
+    SWATCH = "swatch"
+    TEXT = "text"

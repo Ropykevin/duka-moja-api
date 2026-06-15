@@ -70,3 +70,14 @@ def require_tenant_context() -> uuid.UUID:
     if tenant_id is None:
         raise ForbiddenError("Tenant context required. Provide X-Tenant-ID header or JWT.")
     return require_tenant_id()
+
+
+async def get_current_user_tenant_id(
+    user_id: uuid.UUID = Depends(require_authenticated_user),
+    session: AsyncSession = Depends(get_db),
+) -> uuid.UUID:
+    from app.modules.auth.repository import UserRepository
+
+    user_repo = UserRepository(session)
+    user = await user_repo.get_by_id_or_raise(user_id)
+    return user.tenant_id

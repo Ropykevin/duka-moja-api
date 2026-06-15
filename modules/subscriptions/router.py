@@ -3,14 +3,13 @@ from uuid import UUID
 from fastapi import APIRouter, Depends
 from sqlalchemy.ext.asyncio import AsyncSession
 
-from app.core.dependencies import get_db
+from app.core.dependencies import get_current_user_tenant_id, get_db
 from app.modules.subscriptions.schemas import (
     PlanListResponse,
     SubscriptionWithFeaturesResponse,
     UpgradeSubscriptionRequest,
 )
 from app.modules.subscriptions.service import SubscriptionService
-from app.modules.tenants.router import get_current_user_tenant_id
 from app.modules.tenants.schemas import SubscriptionPlanResponse, SubscriptionResponse
 
 router = APIRouter(prefix="/subscriptions", tags=["Subscriptions"])
