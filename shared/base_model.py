@@ -249,3 +249,17 @@ class CouponAppliesTo(str, enum.Enum):
 class CouponUsageReferenceType(str, enum.Enum):
     ORDER = "order"
     SALE = "sale"
+
+
+class ReturnStatus(str, enum.Enum):
+    REQUESTED = "requested"
+    APPROVED = "approved"
+    RECEIVED = "received"
+    REFUNDED = "refunded"
+    REJECTED = "rejected"
+    CANCELLED = "cancelled"
+
+
+class ReturnReferenceType(str, enum.Enum):
+    ORDER = "order"
+    SALE = "sale"
