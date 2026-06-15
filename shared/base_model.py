@@ -197,3 +197,23 @@ class SaleStatus(str, enum.Enum):
     DRAFT = "draft"
     COMPLETED = "completed"
     VOIDED = "voided"
+
+
+class PaymentProviderType(str, enum.Enum):
+    CASH = "cash"
+    CARD = "card"
+    MOBILE_MONEY = "mobile_money"
+    BANK_TRANSFER = "bank_transfer"
+    ONLINE = "online"
+
+
+class PaymentTransactionStatus(str, enum.Enum):
+    PENDING = "pending"
+    COMPLETED = "completed"
+    FAILED = "failed"
+    REFUNDED = "refunded"
+
+
+class PaymentReferenceType(str, enum.Enum):
+    SALE = "sale"
+    ORDER = "order"
