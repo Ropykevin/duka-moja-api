@@ -18,6 +18,10 @@ from app.modules.shipping.method_router import router as shipping_methods_router
 from app.modules.shipping.shipment_router import router as shipments_router
 from app.modules.promotions.coupon_router import router as coupons_router
 from app.modules.returns.router import router as returns_router
+from app.modules.system.notification_router import router as notifications_router
+from app.modules.system.audit_router import router as audit_logs_router
+from app.modules.system.media_router import router as media_router
+from app.modules.system.webhook_router import router as webhook_events_router
 from app.modules.inventory.router import router as inventory_router
 from app.modules.procurement.purchase_order_router import router as purchase_orders_router
 from app.modules.procurement.supplier_router import router as suppliers_router
@@ -48,6 +52,10 @@ api_router.include_router(shipping_methods_router)
 api_router.include_router(shipments_router)
 api_router.include_router(coupons_router)
 api_router.include_router(returns_router)
+api_router.include_router(notifications_router)
+api_router.include_router(audit_logs_router)
+api_router.include_router(media_router)
+api_router.include_router(webhook_events_router)
 api_router.include_router(inventory_router)
 api_router.include_router(suppliers_router)
 api_router.include_router(purchase_orders_router)

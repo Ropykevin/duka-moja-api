@@ -6,7 +6,7 @@ def health_check() -> dict[str, str]:
     return {"status": "ok", "worker": "dukamoja"}
 
 
-@celery_app.task(name="app.worker.tasks.send_welcome_email")
-def send_welcome_email(tenant_id: str, user_email: str) -> dict[str, str]:
-    """Placeholder for welcome email - implement in Phase 2."""
-    return {"status": "queued", "tenant_id": tenant_id, "email": user_email}
+@celery_app.task(name="app.worker.tasks.deliver_webhook_event")
+def deliver_webhook_event(event_id: str, tenant_id: str) -> dict[str, str]:
+    """Placeholder for webhook HTTP delivery — implement with httpx in production."""
+    return {"status": "queued", "event_id": event_id, "tenant_id": tenant_id}

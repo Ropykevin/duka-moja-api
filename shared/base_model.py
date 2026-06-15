@@ -263,3 +263,24 @@ class ReturnStatus(str, enum.Enum):
 class ReturnReferenceType(str, enum.Enum):
     ORDER = "order"
     SALE = "sale"
+
+
+class NotificationChannel(str, enum.Enum):
+    IN_APP = "in_app"
+    EMAIL = "email"
+    SMS = "sms"
+
+
+class AuditAction(str, enum.Enum):
+    CREATE = "create"
+    UPDATE = "update"
+    DELETE = "delete"
+    LOGIN = "login"
+    LOGOUT = "logout"
+    OTHER = "other"
+
+
+class WebhookEventStatus(str, enum.Enum):
+    PENDING = "pending"
+    DELIVERED = "delivered"
+    FAILED = "failed"
