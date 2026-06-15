@@ -14,6 +14,8 @@ from app.modules.pos.sale_router import router as sales_router
 from app.modules.payments.provider_router import router as payment_providers_router
 from app.modules.payments.method_router import router as payment_methods_router
 from app.modules.payments.payment_router import router as payments_router
+from app.modules.shipping.method_router import router as shipping_methods_router
+from app.modules.shipping.shipment_router import router as shipments_router
 from app.modules.inventory.router import router as inventory_router
 from app.modules.procurement.purchase_order_router import router as purchase_orders_router
 from app.modules.procurement.supplier_router import router as suppliers_router
@@ -40,6 +42,8 @@ api_router.include_router(sales_router)
 api_router.include_router(payment_providers_router)
 api_router.include_router(payment_methods_router)
 api_router.include_router(payments_router)
+api_router.include_router(shipping_methods_router)
+api_router.include_router(shipments_router)
 api_router.include_router(inventory_router)
 api_router.include_router(suppliers_router)
 api_router.include_router(purchase_orders_router)

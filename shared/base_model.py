@@ -217,3 +217,19 @@ class PaymentTransactionStatus(str, enum.Enum):
 class PaymentReferenceType(str, enum.Enum):
     SALE = "sale"
     ORDER = "order"
+
+
+class ShippingMethodType(str, enum.Enum):
+    FLAT_RATE = "flat_rate"
+    FREE = "free"
+    PICKUP = "pickup"
+    CARRIER = "carrier"
+
+
+class ShipmentStatus(str, enum.Enum):
+    PENDING = "pending"
+    PROCESSING = "processing"
+    SHIPPED = "shipped"
+    IN_TRANSIT = "in_transit"
+    DELIVERED = "delivered"
+    CANCELLED = "cancelled"
