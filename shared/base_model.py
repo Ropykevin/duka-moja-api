@@ -117,3 +117,22 @@ class AttributeDisplayType(str, enum.Enum):
     SELECT = "select"
     SWATCH = "swatch"
     TEXT = "text"
+
+
+class InventoryMovementSource(str, enum.Enum):
+    PURCHASE = "purchase"
+    POS_SALE = "pos_sale"
+    ONLINE_SALE = "online_sale"
+    RETURN = "return"
+    TRANSFER_IN = "transfer_in"
+    TRANSFER_OUT = "transfer_out"
+    ADJUSTMENT = "adjustment"
+
+
+class StockTransferStatus(str, enum.Enum):
+    DRAFT = "draft"
+    PENDING_APPROVAL = "pending_approval"
+    APPROVED = "approved"
+    IN_TRANSIT = "in_transit"
+    RECEIVED = "received"
+    CANCELLED = "cancelled"
